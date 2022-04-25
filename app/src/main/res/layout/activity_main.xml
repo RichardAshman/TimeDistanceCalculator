@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTimeTextNumberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="eg. 20"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/clearButton"
+        app:layout_constraintTop_toBottomOf="@+id/editSpeedTextNumberDecimal" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance (Km)"
+        app:layout_constraintBottom_toBottomOf="@+id/editDistanceTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/calcButton"
+        app:layout_constraintTop_toTopOf="@+id/editDistanceTextNumberDecimal" />
+
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Fill out 2 of the 3 text fields then press CALCULATE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/speedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed (km/h)"
+        app:layout_constraintBottom_toBottomOf="@+id/editSpeedTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/calcButton"
+        app:layout_constraintTop_toTopOf="@+id/editSpeedTextNumberDecimal" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time (h)"
+        app:layout_constraintBottom_toBottomOf="@+id/editTimeTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/calcButton"
+        app:layout_constraintTop_toTopOf="@+id/editTimeTextNumberDecimal" />
+
+    <EditText
+        android:id="@+id/editSpeedTextNumberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="eg. 15"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editTimeTextNumberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/editDistanceTextNumberDecimal" />
+
+    <EditText
+        android:id="@+id/editDistanceTextNumberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="eg. 5"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/editSpeedTextNumberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/instructionTextView" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="150dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="32dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSpace"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="150dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="32dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toEndOf="@+id/buttonSpace" />
+
+    <Space
+        android:id="@+id/buttonSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clearButton" />
+
+    <Switch
+        android:id="@+id/timeUnitSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/timeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/timeTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
